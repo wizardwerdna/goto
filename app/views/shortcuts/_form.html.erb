@@ -1,0 +1,33 @@
+<%= form_for(@shortcut) do |f| %>
+  <% if @shortcut.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@shortcut.errors.count, "error") %> prohibited this shortcut from being saved:</h2>
+
+      <ul>
+      <% @shortcut.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :long_url %><br />
+    <%= f.text_field :long_url %>
+  </div>
+  <div class="field">
+    <%= f.label :keyword %><br />
+    <%= f.text_field :keyword %>
+  </div>
+  <div class="field">
+    <%= f.label :number_of_redirects %><br />
+    <%= f.number_field :number_of_redirects %>
+  </div>
+  <div class="field">
+    <%= f.label :owner %><br />
+    <%= f.text_field :owner %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

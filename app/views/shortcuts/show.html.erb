@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Long url:</b>
+  <%= @shortcut.long_url %>
+</p>
+
+<p>
+  <b>Keyword:</b>
+  <%= @shortcut.keyword %>
+</p>
+
+<p>
+  <b>Number of redirects:</b>
+  <%= @shortcut.number_of_redirects %>
+</p>
+
+<p>
+  <b>Owner:</b>
+  <%= @shortcut.owner %>
+</p>
+
+
+<%= link_to 'Edit', edit_shortcut_path(@shortcut) %> |
+<%= link_to 'Back', shortcuts_path %>

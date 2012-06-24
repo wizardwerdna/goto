@@ -1,4 +1,9 @@
 Goto::Application.routes.draw do
+  resources :r
+  
+  resources :shortcuts
+
+  root to: "shortcuts#index"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
