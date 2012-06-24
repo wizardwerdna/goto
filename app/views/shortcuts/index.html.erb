@@ -2,10 +2,10 @@
 
 <table>
   <tr>
-    <th>Long url</th>
     <th>Keyword</th>
     <th>Number of redirects</th>
     <th>Owner</th>
+    <th>Long url</th>
     <th></th>
     <th></th>
     <th></th>
@@ -13,10 +13,10 @@
 
 <% @shortcuts.each do |shortcut| %>
   <tr>
-    <td><%= shortcut.long_url %></td>
     <td><%= shortcut.keyword %></td>
     <td><%= shortcut.number_of_redirects %></td>
     <td><%= shortcut.owner %></td>
+    <td><%= shortcut.long_url %></td>
     <td><%= link_to 'Show', shortcut %></td>
     <td><%= link_to 'Edit', edit_shortcut_path(shortcut) %></td>
     <td><%= link_to 'Destroy', shortcut, method: :delete, data: { confirm: 'Are you sure?' } %></td>
