@@ -14,12 +14,12 @@
 ActiveRecord::Schema.define(:version => 20120624213440) do
 
   create_table "shortcuts", :force => true do |t|
-    t.string   "long_url"
-    t.string   "keyword"
-    t.integer  "number_of_redirects"
-    t.string   "owner"
-    t.datetime "created_at",          :null => false
-    t.datetime "updated_at",          :null => false
+    t.string   "long_url",                           :null => false
+    t.string   "keyword",                            :null => false
+    t.integer  "number_of_redirects", :default => 0
+    t.string   "owner",                              :null => false
+    t.datetime "created_at",                         :null => false
+    t.datetime "updated_at",                         :null => false
   end
 
 end

@@ -1,10 +1,10 @@
 class CreateShortcuts < ActiveRecord::Migration
   def change
     create_table :shortcuts do |t|
-      t.string :long_url
-      t.string :keyword
-      t.integer :number_of_redirects
-      t.string :owner
+      t.string :long_url, null: false
+      t.string :keyword, null: false
+      t.integer :number_of_redirects, default: 0
+      t.string :owner, null: false
 
       t.timestamps
     end
