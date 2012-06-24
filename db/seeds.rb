@@ -5,3 +5,12 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+#
+require 'csv'
+
+filename = Rails.root.join "db/goto_seed.csv"
+
+CSV.foreach(filename, headers: true) do |row|
+  puts row.inspect
+  Shortcut.create keyword: row[0], owner: row[1], long_url: row[2]
+end
