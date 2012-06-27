@@ -3,8 +3,13 @@ class ShortcutsController < ApplicationController
   # GET /shortcuts.json
   def index
     @shortcuts = Shortcut.all
-    @shortcuts.sort! { |a, b| a.send(params[:sortBy]) <=> b.send(params[:sortBy]) }
-    @shortcuts.reverse!
+    Rails.logger.info(params[:sortBy].class)
+    sortByOptions = ["keyword", "number_of_redirects", "owner", "long_url"]
+    if params.has_key?(:sortBy)
+    	@sortBy = (sortByOptions.include? params[:sortBy]) ? params[:sortBy] : "keyword"
+    else @sortBy = "keyword"
+    end
+    @shortcuts.sort! { |a, b| a.send(@sortBy) <=> b.send(@sortBy) }
 
     respond_to do |format|
       format.html # index.html.erb
