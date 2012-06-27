@@ -20,12 +20,12 @@
 
         1.  [ ] Users must be authenticated automatically, without manually entering username or password (e.g. leverage NTLM, Kerberos).
     
-        1.  [ ] Users cannot overwrite existing keywords entered by other users, but should be notified when requesting an existing keyword.  In that case, the following error message will display (X = keyword):  “Keyword “X” already exists”  
+        1.  [X] Users cannot overwrite existing keywords entered by other users, but should be notified when requesting an existing keyword.  In that case, the following error message will display (X = keyword):  "Keyword “X” already exists"  
     
-        1.  [ ] The long URL must be eight or more characters.  If not, then the following error message will display:  “URL is too short to be valid ( < 8 characters)”
+        1.  [X] The long URL must be eight or more characters.  If not, then the following error message will display:  “URL is too short to be valid ( < 8 characters)”
         Note:  http (4) + “:” (1) + “//” (2) + alphanumeric (at least 1) = 8
     
-        1.  [ ] The keyword must be made up of letters and/or numbers, and may not contain extended or special characters, other than short-dash and underscore.  If a keyword that does not meet this criteria is attempted, then the following error message will display (X = invalid character):  “Your keyword contains an invalid character: X” 
+        1.  [X] The keyword must be made up of letters and/or numbers, and may not contain extended or special characters, other than short-dash and underscore.  If a keyword that does not meet this criteria is attempted, then the following error message will display (X = invalid character):  “Your keyword contains an invalid character: X” 
     
         1.  [X] The solution will support English language.
     
